@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markup Sorcerer: Luminous Fracture</title>
+    <link rel="stylesheet" href="../game-css/html.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="../video/Crystal.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div id="feedback-box" class="hidden">
+        <h2 style="color: #ff3333; margin-top: 0; font-family: 'Courier New', Courier, monospace;">⚠️ SYNTAX ERROR</h2>
+        <div id="ai-comment"></div>
+        <div id="explanation-text"></div>
+        <button id="close-feedback-btn" class="choice-btn" style="margin-top: 20px; border-color: #ff3333; color: #ff3333;">Acknowledge</button>
+    </div>
+
+    <div id="game-container">
+        <div id="hud" class="hidden">
+            <div class="stat">Sync: <span id="sync" style="color: #e040fb;">42</span>%</div>
+            <div class="stat">Fragments: <span id="chipsets" style="color: #00e5ff;">0</span>/15</div>
+            <div class="stat">Stability: <span id="win-rate">50</span>%</div>
+            <div class="stat">Location: <span id="current-location">Luminous Fracture</span></div>
+        </div>
+
+        <div id="dialogue-box">
+            <div id="npc-header">
+                <span id="npc-emoji">⚠️</span>
+                <span id="npc-name">SYSTEM ALERT</span>
+            </div>
+            <div id="npc-text">CRITICAL ERROR. Unauthorized entity detected...</div>
+            <button id="proceed-btn">Proceed</button>
+        </div>
+
+        <div id="map-container" class="hidden">
+            <h3 id="map-label" style="margin: 0 0 10px 0; font-size: 1em; color: #e040fb;">Cavern Depth</h3>
+            <div id="room-tracker">
+                </div>
+        </div>
+
+        <div id="action-area" class="hidden">
+            <div id="tips-bar">Tip: HTML tags usually come in pairs: an opening tag and a closing tag!</div>
+
+            <div id="in-game-dialogue" class="character-prompt"></div>
+            <p id="challenge-text"></p>
+            <div id="code-window"></div>
+            <div id="options-grid"></div>
+            
+            <button id="hint-btn">💡 Request Hint (-5 Sync)</button>
+        </div>
+    </div>
+
+    <script src="../game-js/html.js"></script>
+</body>
+</html>

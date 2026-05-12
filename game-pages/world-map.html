@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Map - Code and Play</title>
+    <link rel="stylesheet" href="../game-css/map.css">
+</head>
+<body>
+    <header>
+        <a href="../pages/landingpage.html">← Back to Home</a>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>The Fractured Realms</h1>
+            <p>Descend into the depths of corrupted code! Master each realm to unlock the mysteries of programming and face the unknown.</p>
+        </section>
+        <div class="map-container">
+            <!-- Magical sparkles for atmosphere -->
+            <div class="sparkle" style="top: 150px; left: 200px;"></div>
+            <div class="sparkle" style="top: 400px; left: 450px;"></div>
+            <div class="sparkle" style="top: 250px; left: 650px;"></div>
+            <div class="sparkle" style="top: 100px; left: 800px;"></div>
+            
+            <!-- Region 1: Corrupted Layer -->
+            <div class="level unlocked cpp" id="level-cpp" style="top: 200px; left: 120px;" onclick="launchGame('cpp')">
+                <div class="level-icon">💀</div>
+                <div class="level-label">Corrupted<br>Layer</div>
+            </div>
+            
+            <!-- Region 2: Pyroclast Depths -->
+            <div class="level java" id="level-java" style="top: 350px; left: 320px;" onclick="launchGame('java')">
+                <div class="level-icon">🌋</div>
+                <div class="level-label">Pyroclast<br>Depths</div>
+            </div>
+            
+            <!-- Region 3: Luminous Fracture -->
+            <div class="level html" id="level-html" style="top: 180px; left: 500px;" onclick="launchGame('html')">
+                <div class="level-icon">💎</div>
+                <div class="level-label">Luminous<br>Fracture</div>
+            </div>
+            
+            <!-- Region 4: Verdant Duins -->
+            <div class="level css" id="level-css" style="top: 400px; left: 680px;" onclick="launchGame('css')">
+                <div class="level-icon">🏛️</div>
+                <div class="level-label">Verdant<br>Duins</div>
+            </div>
+            
+            <!-- Final Boss: ??????? -->
+            <div class="level boss" id="level-boss" style="top: 110px; left: 840px;" onclick="launchGame('boss')">
+                <div class="level-icon">❓</div>
+                <div class="level-label">???????</div>
+            </div>
+        </div>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-dot unlocked"></div>
+                <span>Conquered</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot current"></div>
+                <span>Current Quest</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot locked"></div>
+                <span>Locked Region</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-dot boss"></div>
+                <span>Final Challenge</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="../game-js/map.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Sorcerer: Verdant Runtime</title>
+    <link rel="stylesheet" href="../game-css/css.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="../video/Forest.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div id="feedback-box" class="hidden">
+        <h2 style="color: #ffb300; margin-top: 0; font-family: 'Courier New', Courier, monospace;">⚠️ STYLING ERROR</h2>
+        <div id="ai-comment"></div>
+        <div id="explanation-text"></div>
+        <button id="close-feedback-btn" class="choice-btn" style="margin-top: 20px; border-color: #ffb300; color: #ffb300;">Acknowledge</button>
+    </div>
+
+    <div id="game-container">
+        <div id="hud" class="hidden">
+            <div class="stat">Stability: <span id="battery" style="color: #69f0ae;">100</span>%</div>
+            <div class="stat">Root Keys: <span id="chipsets" style="color: #b2ff59;">0</span>/15</div>
+            <div class="stat">Sync Rate: <span id="win-rate">50</span>%</div>
+            <div class="stat">Location: <span id="current-location">Luminous Fracture</span></div>
+        </div>
+
+        <div id="dialogue-box">
+            <div id="npc-header">
+                <span id="npc-emoji">🌿</span>
+                <span id="npc-name">SYSTEM LOG</span>
+            </div>
+            <div id="npc-text">Loading...</div>
+            <button id="proceed-btn">Proceed</button>
+        </div>
+
+        <div id="map-container" class="hidden">
+            <h3 id="map-label" style="margin: 0 0 10px 0; font-size: 1em;">Root Node Distance</h3>
+            <div id="room-tracker">
+                </div>
+        </div>
+
+        <div id="action-area" class="hidden">
+            <div id="tips-bar">Tip: Always close your CSS declarations with a semicolon!</div>
+
+            <div id="in-game-dialogue" class="character-prompt"></div>
+            <p id="challenge-text"></p>
+            <div id="code-window"></div>
+            <div id="options-grid"></div>
+            
+            <button id="hint-btn">💡 Request Hint (-5 Stability)</button>
+        </div>
+    </div>
+
+    <script src="../game-js/css.js"></script>
+</body>
+</html>

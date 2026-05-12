@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary Sorcerer: The Final Layer</title>
+    <link rel="stylesheet" href="../game-css/last.css">
+</head>
+<body>
+<!-- DRAMATIC INTRO -->
+<div id="intro-screen">
+    <div class="intro-glitch"></div>
+
+    <div class="intro-content">
+        <h1 id="intro-title">
+            <span>ROOT SYSTEM NODE</span>
+            <small>?????</small>
+        </h1>
+
+        <div id="intro-warning">
+            [ SYSTEM BOOT SEQUENCE INITIALIZING ]
+        </div>
+
+        <p id="intro-subtext">
+            Establishing synchronization with corrupted reality...
+        </p>
+    </div>
+</div>
+
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="../video/last.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    <div class="theme-overlay"></div>
+
+    <div id="feedback-box" class="hidden" style="position: absolute; top: 20%; left: 50%; transform: translateX(-50%); background: #0B132B; padding: 20px; border: 2px solid #ff3333; z-index: 100; border-radius: 10px; box-shadow: 0 0 30px red;">
+        <h2 style="color: #ff3333; margin-top: 0; font-family: 'Courier New', Courier, monospace;">⚠️ COMPILATION ERROR</h2>
+        <div id="ai-comment"></div>
+        <div id="explanation-text" style="margin-top:10px;"></div>
+        <button id="close-feedback-btn" style="margin-top: 20px; border-color: #ff3333; color: #ff3333;">Acknowledge</button>
+    </div>
+
+    <div id="game-container">
+        <div id="hud" class="hidden">
+            <div class="stat">Battery: <span id="battery" style="color: #5BC0BE;">100</span>%</div>
+            <div class="stat">Fragments: <span id="chipsets" style="color: #FFD700;">1</span>/15</div>
+            <div class="stat">Sync Rate: <span id="win-rate">50</span>%</div>
+            <div class="stat">Location: <span id="current-location">Loading...</span></div>
+        </div>
+
+        <div id="dialogue-box">
+            <div id="npc-header">
+                <span id="npc-emoji">⚠️</span> 
+                <span id="npc-name">SYSTEM ALERT</span>
+            </div>
+            <div id="npc-text">Loading simulation data...</div>
+            <button id="proceed-btn">Proceed</button>
+        </div>
+
+        <div id="map-container" class="hidden">
+            <h3 style="margin: 0 0 10px 0; font-size: 1em; color: #5BC0BE;">System Layers</h3>
+            <div id="room-tracker"></div>
+        </div>
+
+        <div id="action-area" class="hidden">
+            <div id="tips-bar" style="color: #FFB703; margin-bottom: 15px; font-size: 0.9em; font-style: italic;">Tip: System languages are converging. Stay alert!</div>
+            <div id="in-game-dialogue"></div>
+            <p id="challenge-text" style="font-weight: bold;"></p>
+            <div id="code-window"></div>
+            <div id="options-grid"></div>
+            <button id="hint-btn" style="background: transparent; border: 1px dashed #5BC0BE; color: #5BC0BE; width: 100%;">💡 Request Hint (-5 Battery)</button>
+        </div>
+
+        <div id="end-screen" class="hidden">
+            <h1 style="color: #FFD700; text-shadow: 0 0 20px #FFD700; font-size: 2.5em;">SYSTEM DISCONNECTED</h1>
+            <p style="color: #E6F1FF; font-size: 1.2em; line-height: 1.8; margin: 30px 0;">
+                Thank you for playing this game. We hope you enjoyed the adventure through the corrupted codebase.<br><br>
+                We hope for your support for more updates in the future.<br><br>
+                The journey ends here... for now.
+            </p>
+            <button onclick="window.location.href='c++.html'" style="margin-top: 20px;">Play Again</button>
+        </div>
+    </div>
+
+    <script src="../game-js/last.js"></script>
+</body>
+</html>
