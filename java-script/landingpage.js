@@ -66,12 +66,12 @@ window.addEventListener("load", () => {
     }
 
     // Super admin account
-    if(!users.find(u => u.username === "SuperAdmin")){
+    if(!users.find(u => u.username === "boss") && !users.find(u => u.username === "SuperAdmin")){
         users.push({
-            name: "Super Administrator",
-            email: "superadmin@google.con",
-            username: "SuperAdmin",
-            password: "SuperAdmin1223",
+            name: "Head Admin",
+            email: "admin@example.com",
+            username: "boss",
+            password: "password123",
             role: "superadmin"
         });
     }
@@ -230,7 +230,7 @@ document.getElementById("registrationForm").addEventListener("submit", function(
         error.textContent = "Passwords do not match!";
         return;
     }
-    if(username === "admin" || username === "ajpolles456"){
+    if(username === "admin" || username === "ajpolles456" || username === "boss" || username === "SuperAdmin"){
         error.textContent = "That username is reserved.";
         return;
     }
@@ -265,14 +265,24 @@ document.getElementById("loginForm").addEventListener("submit", function(e){
         u.password === password
     );
 
-    if(!user && userInput === "SuperAdmin" && password === "SuperAdmin1223"){
-        user = {
-            name: "Super Administrator",
-            email: "superadmin@google.con",
-            username: "SuperAdmin",
-            password: "SuperAdmin1223",
-            role: "superadmin"
-        };
+    if(!user && ((userInput === "boss" && password === "password123") || (userInput === "SuperAdmin" && password === "SuperAdmin1223"))){
+        if(userInput === "boss"){
+            user = {
+                name: "Head Admin",
+                email: "admin@example.com",
+                username: "boss",
+                password: "password123",
+                role: "superadmin"
+            };
+        } else {
+            user = {
+                name: "Super Administrator",
+                email: "superadmin@google.con",
+                username: "SuperAdmin",
+                password: "SuperAdmin1223",
+                role: "superadmin"
+            };
+        }
         users.push(user);
         saveUsers(users);
     }
