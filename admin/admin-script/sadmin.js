@@ -395,14 +395,16 @@ allUsers.forEach(u => {
 
 // 2. Add the 'boss' account ONLY if it doesn't already exist
 if (!seenUsernames.has("boss")) {
-    uniqueUsers.push({
-        username: "boss", 
-        password: "password123", 
-        role: "superadmin", 
-        name: "Head Admin", 
+    const bossUser = {
+        username: "boss",
+        password: "password123",
+        role: "superadmin",
+        name: "Head Admin",
         email: "admin@example.com"
-    });
-    alert("Superuser created! Username: boss | Password: password123");
+    };
+    uniqueUsers.push(bossUser);
+    seenUsernames.add("boss");
+    console.info("Superuser created: boss / password123");
 }
 
 // 3. Save the cleaned-up list back to localStorage
